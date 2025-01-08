@@ -35,7 +35,7 @@ const Contact = () => {
 
               {/* Right Section */}
               <div className="bg-white border-2 rounded-xl p-6">
-          <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
+          <h1 className="text-slate-600 text-center text-2xl font-bold mb-6">
             Contact
           </h1>
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
@@ -77,34 +77,34 @@ const Contact = () => {
 
         {/* Left Section */}
         <div className="bg-white border-2 rounded-xl p-6">
-          <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
+          <h1 className="text-slate-600 text-center text-2xl font-bold mb-6">
             Let's Connect
           </h1>
           <div className="flex items-center gap-4 mb-6">
             <TiMessages className="text-blue-500 h-10 w-10" />
             <div>
               <span>Email</span>
-              <p className="text-slate-800 font-bold">pg254289@gmail.com</p>
+              <p className="text-slate-600 font-bold">pg254289@gmail.com</p>
             </div>
           </div>
           <div className="flex items-center gap-4 mb-6">
             <FaSquarePhoneFlip className="text-blue-500 h-10 w-10" />
             <div>
               <span>Phone</span>
-              <p className="text-slate-800 font-bold">+91-9205121468</p>
+              <p className="text-slate-600 font-bold">+91-9205121468</p>
             </div>
           </div>
           <div className="flex items-center gap-4 mb-6">
             <FaLocationDot className="text-blue-500 h-10 w-10" />
             <div>
               <span>Location</span>
-              <p className="text-slate-800 font-bold">121002-Faridabad, Haryana</p>
+              <p className="text-slate-600 font-bold">121002-Faridabad, Haryana</p>
             </div>
           </div>
           <div className="flex gap-4 justify-center mt-6">
             <BsLinkedin className="text-blue-500 h-8 w-8 cursor-pointer" />
-            <BsGithub className="text-black h-8 w-8 cursor-pointer" />
-            <BsTwitterX className="text-black h-8 w-8 cursor-pointer" />
+            <BsGithub className="text-slate-700 h-8 w-8 cursor-pointer" />
+            <BsTwitterX className="text-slate-700 h-8 w-8 cursor-pointer" />
           </div>
         </div>
 

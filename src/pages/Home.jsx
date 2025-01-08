@@ -37,12 +37,17 @@ const Home = () => {
             MongoDB, Express.js, React.js, and Node.js
           </p>
           <div className="flex justify-center md:justify-start gap-3 mt-4">
-            <button className="bg-orange-600 text-white font-semibold py-2 px-4 rounded-3xl hover:opacity-75 cursor-pointer">
+          <a href="#projects">
+          <button className="bg-orange-600 text-white font-semibold py-2 px-4 rounded-3xl hover:opacity-75 cursor-pointer">
               View Projects
             </button>
-            <button className="text-white font-semibold py-2 px-4 border-2 border-slate-100 rounded-3xl hover:opacity-75 cursor-pointer">
-              Contact Me
+          </a>
+
+            <a href="#contact">
+            <button  className="text-white font-semibold py-2 px-4 border-2 border-slate-100 rounded-3xl hover:opacity-75 cursor-pointer">
+            Contact Me
             </button>
+            </a>
           </div>
         </div>
 

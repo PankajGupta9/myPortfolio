@@ -8,25 +8,25 @@ const Projects = () => {
       image: realEstate,
       title: "Real Estate Website",
       description: "A real estate platform for listing and booking properties, featuring an admin dashboard and search functionality.",
-      link: "https://your-real-estate-demo-link.com",
+      link: "https://real-estate-ten-ashen.vercel.app/",
     },
     {
       image: disaster,
       title: "Natural Disaster Management Website",
       description: "MERN stack Natural disaster response platform with real-time messaging, resource management, and alerts, featuring a responsive, user-friendly interface.",
-      link: "https://your-food-delivery-demo-link.com",
+      link: "https://rescue-connect-pi.vercel.app/",
     },
     {
       image: ecommerce,
       title: "E-Commerce Website",
       description: "A fully functional Reactjs stack e-commerce platform with user authentication, product management, and payment integration.",
-      link: "https://your-ecommerce-demo-link.com",
+      link: "https://project-3-umber.vercel.app/",
     },
-    {
-      title: "Crypto Website",
-      description: "Reactjs fully functional frontend website for purchasing, exchanging, monitoring cryptocurrency.",
-      link: "https://your-portfolio-demo-link.com",
-    },
+    // {
+    //   title: "Crypto Website",
+    //   description: "Reactjs fully functional frontend website for purchasing, exchanging, monitoring cryptocurrency.",
+    //   link: "https://your-portfolio-demo-link.com",
+    // },
   ];
 
   return (

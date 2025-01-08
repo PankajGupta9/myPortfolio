@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex items-center justify-between px-6 md:px-[105px] fixed top-0 w-full bg-white shadow-md z-20 max-w-full">
+    <header className="flex items-center justify-between px-6 md:px-[80px] fixed top-0 w-full bg-white shadow-md z-20 max-w-full">
       {/* Logo */}
       <div className="flex items-center">
         <p className="text-gray-400 text-2xl font-bold">Pankaj</p>
