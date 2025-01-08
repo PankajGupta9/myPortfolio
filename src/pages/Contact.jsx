@@ -1,128 +1,114 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import { TiMessages } from "react-icons/ti";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaSquarePhoneFlip } from "react-icons/fa6";
-import { BsLinkedin,BsTwitterX,BsGithub } from "react-icons/bs";
-import {  toast } from 'react-toastify';
-
-import  { useRef } from 'react';
+import { FaLocationDot, FaSquarePhoneFlip } from "react-icons/fa6";
+import { BsLinkedin, BsTwitterX, BsGithub } from "react-icons/bs";
+import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 
-
-
 const Contact = () => {
-
   const form = useRef();
 
   const sendEmail = async (e) => {
-      e.preventDefault();
+    e.preventDefault();
+    emailjs
+      .sendForm('service_k8tpavf', 'template_8pdqua7', form.current, {
+        publicKey: 'tzYwqiF3GHJfRdnZD',
+      })
+      .then(
+        () => {
+          form.current.reset();
+          toast.success('Email sent Successfully!');
+        },
+        (error) => {
+          toast.error('Something went wrong!');
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
-      emailjs
-        .sendForm('service_k8tpavf', 'template_8pdqua7', form.current, {
-          publicKey: 'tzYwqiF3GHJfRdnZD',
-        })
-        .then(
-          () => {
-            form.current.reset(); // Clear the form fields
-            toast.success('Email sent Successfully !.');
-            console.log('SUCCESS!');
-          },
-          (error) => {
-            toast.error('Something went wrong!');
-            console.log('FAILED...', error.text);
-          },
-        );
-    };
-    
   return (
-    <div id="contact" className="min-h-screen bg-slate-100">
-      <h2 className="text-slate-600 text-3xl font-bold text-center p-5">
+    <div id="contact" className="min-h-screen bg-slate-100 px-4 py-8">
+      <h2 className="text-slate-600 text-3xl font-bold text-center mb-6">
         Get in Touch
       </h2>
-      <div className="flex justify-center items-center">
-        <div className="flex-1 h-[500px] bg-white border-2 m-20 rounded-xl">
-          <h1 className="text-slate-800 text-center text-2xl font-bold p-10">Let's Connect</h1>
-
-          <div className="flex  items-center pl-[55px] mb-7 gap-4">
-            <TiMessages className="text-blue-500 h-[50px] w-[50px] hover:opacity-75" />
-            <div className="flex flex-col">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left Section */}
+        <div className="bg-white border-2 rounded-xl p-6">
+          <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
+            Let's Connect
+          </h1>
+          <div className="flex items-center gap-4 mb-6">
+            <TiMessages className="text-blue-500 h-10 w-10" />
+            <div>
               <span>Email</span>
               <p className="text-slate-800 font-bold">pg254289@gmail.com</p>
             </div>
           </div>
-          <div className="flex  items-center pl-[55px] mb-7 gap-4">
-            <FaSquarePhoneFlip className="text-blue-500 h-[50px] w-[50px] hover:opacity-75" />
-            <div className="flex flex-col">
+          <div className="flex items-center gap-4 mb-6">
+            <FaSquarePhoneFlip className="text-blue-500 h-10 w-10" />
+            <div>
               <span>Phone</span>
               <p className="text-slate-800 font-bold">+91-9205121468</p>
             </div>
           </div>
-          <div className="flex  items-center pl-[55px] mt-7 gap-4">
-            <FaLocationDot className="text-blue-500 h-[50px] w-[50px] hover:opacity-75" />
-            <div className="flex flex-col">
+          <div className="flex items-center gap-4 mb-6">
+            <FaLocationDot className="text-blue-500 h-10 w-10" />
+            <div>
               <span>Location</span>
-              <p className="text-slate-800 font-bold">121002-Faridabad,Haryana</p>
+              <p className="text-slate-800 font-bold">121002-Faridabad, Haryana</p>
             </div>
           </div>
-
-          <div className="flex gap-10 pl-[65px] mt-10">
-            <BsLinkedin className="text-blue-500 h-[40px] w-[40px] hover:opacity-75" />
-            <BsGithub className="text-black h-[40px] w-[40px] hover:opacity-75" />
-            <BsTwitterX className="text-black h-[40px] w-[40px] hover:opacity-75" />
+          <div className="flex gap-4 justify-center mt-6">
+            <BsLinkedin className="text-blue-500 h-8 w-8 cursor-pointer" />
+            <BsGithub className="text-black h-8 w-8 cursor-pointer" />
+            <BsTwitterX className="text-black h-8 w-8 cursor-pointer" />
           </div>
         </div>
-        <div className="flex-1 h-[500px] bg-white border-2 m-20 rounded-xl">
-          <h1 className="text-slate-800 text-center text-2xl font-bold p-10">Contact</h1>
 
-          <div >
-
-
-          <form ref={form} onSubmit={sendEmail} 
-          className="flex flex-col w-[500px] mx-auto">
-            {/* <label>Full Name</label> */}
+        {/* Right Section */}
+        <div className="bg-white border-2 rounded-xl p-6">
+          <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
+            Contact
+          </h1>
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <input
               type="text"
-              placeholder='Enter your full name'
-              name='name'
+              placeholder="Enter your full name"
+              name="name"
               required
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             />
-            {/* <label>Email</label> */}
             <input
               type="email"
-              placeholder='Enter Your Email'
-              name='email'
+              placeholder="Enter your email"
+              name="email"
               required
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             />
-            {/* <label>Subject</label> */}
             <input
               type="text"
-              placeholder='Subject'
-              name='subject'
+              placeholder="Subject"
+              name="subject"
               required
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             />
             <textarea
-              type="text"
               placeholder="Type your message..."
-              name='message'
+              name="message"
               required
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             />
-                <button type='submit'
-      className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-    >
-      Send message
-    </button>
-    </form>
-
-          </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Contact
-300
+export default Contact;
