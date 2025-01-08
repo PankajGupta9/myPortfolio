@@ -18,7 +18,7 @@ const Footer = () => {
               Portfolio
             </span>
           </div>
-          <p className="text-slate-200 text-sm md:text-base lg:text-lg mb-6">
+          <p className="text-gray-600 text-sm md:text-base lg:text-lg mb-6">
             Full Stack MERN Developer passionate about creating innovative web
             solutions and delivering exceptional user experiences.
           </p>
