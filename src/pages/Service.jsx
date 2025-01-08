@@ -6,8 +6,8 @@ import { ImPower } from "react-icons/im";
 
 const Service = () => {
   return (
-    <div id="service" className="min-h-screen flex flex-col justify-center items-center bg-red-200 px-4 md:px-10">
-      <h1 className="text-slate-600 font-bold text-3xl md:text-4xl text-center my-6">Freelancing Services</h1>
+    <div id="service" className="min-h-screen flex flex-col justify-center items-center bg-blue-950 px-4 md:px-10">
+      <h1 className="text-slate-200 font-bold text-3xl md:text-4xl text-center my-6">Freelancing Services</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Full Stack Development Card */}

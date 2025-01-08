@@ -27,46 +27,14 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-slate-100 px-4 py-8">
-      <h2 className="text-slate-600 text-3xl font-bold text-center mb-6">
+    <div id="contact" className="min-h-screen bg-blue-950 px-4 py-8">
+      <h2 className="text-slate-200 text-3xl font-bold text-center mb-6">
         Get in Touch
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Left Section */}
-        <div className="bg-white border-2 rounded-xl p-6">
-          <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
-            Let's Connect
-          </h1>
-          <div className="flex items-center gap-4 mb-6">
-            <TiMessages className="text-blue-500 h-10 w-10" />
-            <div>
-              <span>Email</span>
-              <p className="text-slate-800 font-bold">pg254289@gmail.com</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 mb-6">
-            <FaSquarePhoneFlip className="text-blue-500 h-10 w-10" />
-            <div>
-              <span>Phone</span>
-              <p className="text-slate-800 font-bold">+91-9205121468</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 mb-6">
-            <FaLocationDot className="text-blue-500 h-10 w-10" />
-            <div>
-              <span>Location</span>
-              <p className="text-slate-800 font-bold">121002-Faridabad, Haryana</p>
-            </div>
-          </div>
-          <div className="flex gap-4 justify-center mt-6">
-            <BsLinkedin className="text-blue-500 h-8 w-8 cursor-pointer" />
-            <BsGithub className="text-black h-8 w-8 cursor-pointer" />
-            <BsTwitterX className="text-black h-8 w-8 cursor-pointer" />
-          </div>
-        </div>
 
-        {/* Right Section */}
-        <div className="bg-white border-2 rounded-xl p-6">
+              {/* Right Section */}
+              <div className="bg-white border-2 rounded-xl p-6">
           <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
             Contact
           </h1>
@@ -106,6 +74,40 @@ const Contact = () => {
             </button>
           </form>
         </div>
+
+        {/* Left Section */}
+        <div className="bg-white border-2 rounded-xl p-6">
+          <h1 className="text-slate-800 text-center text-2xl font-bold mb-6">
+            Let's Connect
+          </h1>
+          <div className="flex items-center gap-4 mb-6">
+            <TiMessages className="text-blue-500 h-10 w-10" />
+            <div>
+              <span>Email</span>
+              <p className="text-slate-800 font-bold">pg254289@gmail.com</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 mb-6">
+            <FaSquarePhoneFlip className="text-blue-500 h-10 w-10" />
+            <div>
+              <span>Phone</span>
+              <p className="text-slate-800 font-bold">+91-9205121468</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 mb-6">
+            <FaLocationDot className="text-blue-500 h-10 w-10" />
+            <div>
+              <span>Location</span>
+              <p className="text-slate-800 font-bold">121002-Faridabad, Haryana</p>
+            </div>
+          </div>
+          <div className="flex gap-4 justify-center mt-6">
+            <BsLinkedin className="text-blue-500 h-8 w-8 cursor-pointer" />
+            <BsGithub className="text-black h-8 w-8 cursor-pointer" />
+            <BsTwitterX className="text-black h-8 w-8 cursor-pointer" />
+          </div>
+        </div>
+
       </div>
     </div>
   );
