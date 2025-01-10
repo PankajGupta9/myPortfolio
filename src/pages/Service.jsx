@@ -34,10 +34,10 @@ const Service = () => {
         </div>
 
         {/* API Integration Card */}
-        <div className="h-auto bg-white border-2 p-6 rounded-xl shadow-md">
+        <div className="h-auto bg-white border-2 p-6 rounded-xl shadow-md hover:bg-blue-950 group transition-all duration-300">
           <GrIntegration className="text-orange-600 h-[50px] w-[50px] md:h-[70px] md:w-[70px]" />
           <h2 className="text-orange-600 font-semibold text-xl md:text-2xl my-4">API Integration</h2>
-          <p className="text-slate-500 text-base md:text-lg">
+          <p className="text-slate-500 text-base md:text-lg group-hover:text-white">
             Seamless integration of third-party APIs and development of custom API solutions for your business needs.
           </p>
           <div className="flex flex-col my-4 space-y-2">
@@ -57,10 +57,10 @@ const Service = () => {
         </div>
 
         {/* Performance Optimization Card */}
-        <div className="h-auto bg-white border-2 p-6 rounded-xl shadow-md">
+        <div className="h-auto bg-white border-2 p-6 rounded-xl shadow-md hover:bg-blue-950 group transition-all duration-300">
           <ImPower className="text-orange-600 h-[50px] w-[50px] md:h-[70px] md:w-[70px]" />
           <h2 className="text-orange-600 font-semibold text-xl md:text-2xl my-4">Performance Optimization</h2>
-          <p className="text-slate-500 text-base md:text-lg">
+          <p className="text-slate-500 text-base md:text-lg  group-hover:text-white">
             Optimize your web applications for maximum speed, efficiency, and user experience.
           </p>
           <div className="flex flex-col my-4 space-y-2">
